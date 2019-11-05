@@ -1,0 +1,21 @@
+def pose_offset(p_in,axis,offset):
+                  #textmsg("p_in=",p_in)
+	if axis==1:
+		p_out = p[p_in[0]+offset,p_in[1],p_in[2],p_in[3],p_in[4],p_in[5]]
+	elif axis==2:
+		p_out = p[p_in[0],p_in[1]+offset,p_in[2],p_in[3],p_in[4],p_in[5]]
+	elif axis==3:
+		p_out = p[p_in[0],p_in[1],p_in[2]+offset,p_in[3],p_in[4],p_in[5]]
+	elif axis==4:
+		p_out = p[p_in[0],p_in[1],p_in[2],p_in[3]+offset,p_in[4],p_in[5]]
+	elif axis==5:
+		p_out = p[p_in[0],p_in[1],p_in[2],p_in[3],p_in[4]+offset,p_in[5]]
+	elif axis==6:
+		p_out = p[p_in[0],p_in[1],p_in[2],p_in[3],p_in[4],p_in[5]+offset]
+	else:
+		popup("pose_offset: Incorrect axis!")
+		halt
+	end
+                  #textmsg("p_out=",p_out)
+                  return p_out
+end #def
